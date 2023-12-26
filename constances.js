@@ -1,0 +1,1 @@
+var website_title = "A new journey:aaaa0ggmc's website";

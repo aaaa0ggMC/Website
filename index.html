@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html id='HTM' lang="zh_cn">
+<head>
+	<title id="ws::header::title"></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="base.css" />
+	<script type="text/javascript" src="shared_objects.js"></script>
+	<script type="text/javascript" src="constances.js"></script>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="localStorageReader.js"></script>
+	<script type="text/javascript">
+		var lans = ['en','zh_cn'];
+		function switchLan(lan_id) {
+			LS_modElement('lang',lan_id);
+			window.open(location,'_self');
+		}
+		function toggleLan(){
+		try{
+			d = LS_readItem('lang');
+			i = parseInt(d);
+			document.getElementById('HTM').lang = lans[d];
+		}catch(){}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="noneSelection">
+			<a id='langu' onclick="">▼语言</a>
+			<div id='ptc'>
+				
+			</div>
+			<a style="color: #000000;margin-left: 2ch;" class="noneUnderline" href="./news/index.html">新闻</a>
+			<a style="color: #000000;" class="noneUnderline" href="./blogs/index.html">博客</a>
+		</div>
+	</header>
+	<content>
+		
+	</content>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript">
+		///Initialize the website title
+		setElementDoc(getConstance("name.website"),"innerHTML",website_title);//Set the title to the constance website_title
+		///Read local storage
+	</script>
+</body>
+</html>
